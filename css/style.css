@@ -5,6 +5,8 @@
   --secondary-text-color-theme-light: #757575;
   --text-and-background-color: #ffffff;
   --accent-collor: #2196f3;
+  --icon-color: #afb1b8;
+  --background-icon-color: #f5f4fa;
 }
 
 body {
@@ -224,10 +226,23 @@ img {
 .section-page > .section-img:last-child {
   margin: 0;
 }
+
+.icon-section {
+  margin-bottom: 30px;
+}
+.icon-section > .icon-section-list {
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px 25px 100px;
+  background: var(--background-icon-color);
+}
+
 /* КОНЕЦ СЕКЦИИ ЧЕМ МЫ ЗАНИМАЕМСЯ, НАЧАЛО СЕКЦИИ НАША КОМАНДА  */
 
 .profession {
-  background: #f5f4fa;
+  background: var(--background-icon-color);
 }
 .team {
   font-weight: 700;
@@ -282,13 +297,86 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  padding: 30px 59px 30px 59px;
+  width: 270px;
+  padding: 30px 32px 30px 32px;
 }
 .employee {
   margin-bottom: 10px;
 }
+.employee-profession {
+  margin-bottom: 16px;
+}
+.network-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: -10px;
+}
+.social-network {
+  flex-basis: calc(100% / 4 - 10px);
+  margin-right: 10px;
+}
+.social-network:last-child {
+  margin: 0;
+}
+.social-network {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 12px 12px 12px 12px;
+}
+.network-list-link {
+  fill: var(--icon-color);
+}
 
-/* КОНЕЦ СЕКЦИИ НАША КОМАНДА, НАЧАЛО СЕКЦИИ ПОДВАЛ */
+.social-network:hover .network-list-link,
+.social-network:focus .network-list-link {
+  fill: var(--accent-collor);
+}
+/* КОНЕЦ СЕКЦИИ НАША КОМАНДА, НАЧАЛО СЕКЦИИ НАШИ КЛИЕНТЫ */
+.clients-section {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-left: -30px;
+}
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -30px;
+}
+.customer-list-icon {
+  fill: var(--icon-color);
+}
+.clients-list > .clients-item-list {
+  flex-basis: calc(100% / 6 - 30px);
+  margin-right: 30px;
+}
+.clients-item-list:last-child {
+  margin: 0;
+}
+.clients-section-list {
+  margin-bottom: 30px;
+}
+.clients-item-list {
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px 16px 32px;
+}
+.clients-item-list:hover .customer-list-icon,
+.clients-item-list:focus .customer-list-icon {
+  fill: var(--accent-collor);
+}
+
+/* КОНЕЦ СЕКЦИИ НАШИ КЛИЕНТЫ НАЧАЛО ПОДВАЛА */
 
 .footer {
   background: #2f303a;
