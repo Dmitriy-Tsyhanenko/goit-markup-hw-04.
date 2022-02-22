@@ -110,6 +110,24 @@ img {
   color: var(--accent-collor);
 }
 
+/* SVG */
+.social-net-item {
+  fill: var(--secondary-text-color-theme-light);
+}
+.social-net-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+.net-list {
+  margin-right: 10px;
+}
+.social-net-list:hover .social-net-item,
+.social-net-list:focus .social-net-item {
+  fill: var(--accent-collor);
+}
 /* КОНЕЦ СЕКЦИИ ШАПКИ САЙТА, НАЧАЛО СЕКЦИИ ГЕРОЙ */
 
 .hero {
@@ -159,6 +177,10 @@ img {
 }
 .modal-btn {
   padding: 10px 32px 10px 32px;
+}
+.hero {
+  background: gradient;
+  background: url('../images/header/header.jpg');
 }
 
 /* КОНЕЦ СЕКЦИИ ГЕРОЙ, НАЧАЛО СЕКЦИИ ЧЕМ МЫ ЗАНИМАЕМСЯ*/
@@ -300,42 +322,44 @@ img {
   width: 270px;
   padding: 30px 32px 30px 32px;
 }
+
 .employee {
   margin-bottom: 10px;
 }
 .employee-profession {
   margin-bottom: 16px;
 }
+
 .network-list {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-right: -10px;
+}
+.social-network-item {
+  fill: var(--icon-color);
+}
+.social-network-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px 12px 12px 12px;
 }
 .social-network {
-  flex-basis: calc(100% / 4 - 10px);
   margin-right: 10px;
 }
 .social-network:last-child {
-  margin: 0;
-}
-.social-network {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  box-sizing: border-box;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  padding: 12px 12px 12px 12px;
-}
-.network-list-link {
-  fill: var(--icon-color);
+  margin: 0px;
 }
 
-.social-network:hover .network-list-link,
-.social-network:focus .network-list-link {
-  fill: var(--accent-collor);
+.social-network-list:hover,
+.social-network-list:focus {
+  background-color: var(--accent-collor);
+}
+.social-network-list:hover .social-network-item,
+.social-network-list:focus .social-network-item {
+  fill: var(--text-and-background-color);
 }
 /* КОНЕЦ СЕКЦИИ НАША КОМАНДА, НАЧАЛО СЕКЦИИ НАШИ КЛИЕНТЫ */
 .clients-section {
@@ -347,10 +371,13 @@ img {
 .clients-list {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-self: center;
   margin-right: -30px;
 }
-.customer-list-icon {
+.clients-item-list {
+  display: flex;
+}
+.clients-ikon {
   fill: var(--icon-color);
 }
 .clients-list > .clients-item-list {
@@ -363,7 +390,7 @@ img {
 .clients-section-list {
   margin-bottom: 30px;
 }
-.clients-item-list {
+.client-section-icon {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
@@ -371,11 +398,14 @@ img {
   height: 92px;
   padding: 16px 32px 16px 32px;
 }
-.clients-item-list:hover .customer-list-icon,
-.clients-item-list:focus .customer-list-icon {
+.client-section-icon:hover,
+.client-section-icon:focus {
+  border-color: var(--accent-collor);
+}
+.client-section-icon:hover .clients-ikon,
+.client-section-icon:focus .clients-ikon {
   fill: var(--accent-collor);
 }
-
 /* КОНЕЦ СЕКЦИИ НАШИ КЛИЕНТЫ НАЧАЛО ПОДВАЛА */
 
 .footer {
@@ -420,7 +450,57 @@ img {
 .contact-list-item {
   margin-bottom: 9px;
 }
+.networks-address {
+  font-weight: 700px;
+  font-size: 14px;
+  line-height: 1.4px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
+  color: var(--text-and-background-color);
+}
+.footer-icon {
+  display: flex;
+  align-items: baseline;
+}
+.network-address-list {
+  margin-bottom: 20px;
+}
+.footer-ikon-link {
+  margin-left: 70px;
+}
+.network-list {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-network-item {
+  fill: var(--text-and-background-color);
+}
+.social-list-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px 12px 12px 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.social-network-footer {
+  margin-right: 10px;
+}
+.social-network-footer:last-child {
+  margin: 0px;
+}
+
+.social-list-footer:hover,
+.social-list-footer:focus {
+  background-color: var(--accent-collor);
+}
+.social-list-footer:hover .footer-network-item,
+.social-list-footer:focus .footer-network-item {
+  fill: var(--text-and-background-color);
+}
 /* КОНЕЦ СЕКЦИИ ПОДВАЛ, НАЧАЛО СЕКЦИИ ПОРТФОЛИО, КНОПКИ*/
 
 .button-list {
@@ -440,6 +520,9 @@ img {
 .button-list:focus {
   color: var(--text-and-background-color);
   background: #188ce8;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .portfolio-section {
@@ -508,6 +591,10 @@ img {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   padding: 20px 24px 20px 24px;
+}
+.example-element-works:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* КОНЕЦ СЕКЦИИ ПРИМЕРЫ РАБОТ, КОНЕЦ СЕКЦИИ ПОРТФОЛИО */
