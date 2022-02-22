@@ -71,9 +71,12 @@ img {
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header-border {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .logo {
   margin-right: 93px;
@@ -178,9 +181,12 @@ img {
 .modal-btn {
   padding: 10px 32px 10px 32px;
 }
-.hero {
-  background: gradient;
-  background: url('../images/header/header.jpg');
+.hero-gradient {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.9)),
+    url('../images/header/header.jpg');
 }
 
 /* КОНЕЦ СЕКЦИИ ГЕРОЙ, НАЧАЛО СЕКЦИИ ЧЕМ МЫ ЗАНИМАЕМСЯ*/
@@ -265,6 +271,9 @@ img {
 
 .profession {
   background: var(--background-icon-color);
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .team {
   font-weight: 700;
@@ -410,6 +419,9 @@ img {
 
 .footer {
   background: #2f303a;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contact {
   font-style: normal;
