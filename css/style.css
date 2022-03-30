@@ -94,15 +94,25 @@ img {
 .nav-list-item:last-child {
   margin: 0;
 }
-.page-nav-list {
-  margin-left: auto;
-}
-.nav-list-link {
+.navigation-contact {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color-theme-light);
+  color: var(--sprimary-text-color-theme-light);
+}
+.page-nav-list {
+  margin-left: auto;
+}
+.nav-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color-theme-light);
 }
 .nav-list-link:hover,
 .nav-list-link:focus {
@@ -114,22 +124,10 @@ img {
 
 /* SVG */
 .social-net-item {
-  fill: var(--secondary-text-color-theme-light);
-}
-.social-net-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-}
-.net-list {
   margin-right: 10px;
+  fill: currentColor;
 }
-.social-net-list:hover .social-net-item,
-.social-net-list:focus .social-net-item {
-  fill: var(--accent-collor);
-}
+
 /* КОНЕЦ СЕКЦИИ ШАПКИ САЙТА, НАЧАЛО СЕКЦИИ ГЕРОЙ */
 
 .hero {
